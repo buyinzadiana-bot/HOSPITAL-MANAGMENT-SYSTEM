@@ -8,4 +8,11 @@ public class DBConnection {
     private static final String USER = "postgres";
     private static final String PASSWORD = "Eustache1998";
 
+    public static Connection getConnection() throws SQLException {
+        Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+        System.out.println("Database connected successfully!");
+        return conn;
+    }
+
+
 }
